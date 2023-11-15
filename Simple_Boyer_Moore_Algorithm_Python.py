@@ -3,7 +3,6 @@ def indexer(main_text: str)-> dict:
 
     alphabets_dict = {}
     for index_, char in enumerate(main_text):
-        # print(index_, char)
         if char.isalpha() == True:
             if char.lower() not in alphabets_dict.keys():
                 alphabets_dict[char.lower()] = []
@@ -22,7 +21,6 @@ def SearchInText(main_text: str, phrase: str, alphabets_dict: dict)->list: # The
     locations = []
 
     for indexer_loc in alphabets_dict[phrase[0].lower()]: # Move to the indexes collected in our indexer dictionary for the first character of the phrase(phrase[0] char).
-        # for counter in range(len(phrase)):
         if main_text[indexer_loc:indexer_loc + len(phrase)].lower() != phrase.lower():
             pass
 

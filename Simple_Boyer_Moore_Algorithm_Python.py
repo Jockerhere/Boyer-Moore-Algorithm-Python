@@ -1,5 +1,6 @@
-"This function utilizes the Boyer-Moore algorithm to locate the specified phrases that users are searching for."
 def indexer(main_text: str)-> dict:
+    "This function utilizes the Boyer-Moore algorithm to locate the specified phrases that users are searching for."
+
     alphabets_dict = {}
     for index_, char in enumerate(main_text):
         # print(index_, char)

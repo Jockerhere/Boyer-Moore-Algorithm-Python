@@ -28,3 +28,6 @@ def SearchInText(main_text: str, phrase: str, alphabets_dict: dict)->list: # The
              locations.append(indexer_loc)
 
     return locations
+
+
+print("H")

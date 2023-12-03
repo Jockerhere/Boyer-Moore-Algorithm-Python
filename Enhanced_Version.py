@@ -63,7 +63,7 @@ def show_in_text(main_text: str, phrase: str)-> str:
     return main_text
 
 
-def updater(main_text:str, last_indexer: dict,  additional: str):
+def updater(main_text:str, last_indexer: dict,  additional: str)->dict:
     """This function, named 'updater', updates an indexer dictionary by appending additional text to the main_text.
      Its parameters include 'main_text' (the original text), 'last_indexer' (the last inder dict to update), and 'additional' (the text to add)."""
 

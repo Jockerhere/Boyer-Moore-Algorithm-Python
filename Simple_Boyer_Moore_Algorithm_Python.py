@@ -50,16 +50,3 @@ def show_in_text(main_text: str, phrase: str)-> str:
             phrase_locs[j][1] += 1
 
     return main_text
-
-
-
-
-
-
-
-
-
-
-
-
-

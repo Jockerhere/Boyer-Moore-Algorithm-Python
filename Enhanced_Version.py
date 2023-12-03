@@ -61,3 +61,29 @@ def show_in_text(main_text: str, phrase: str)-> str:
             phrase_locs[j][1] += 2
 
     return main_text
+
+
+def updater(main_text:str, last_indexer: dict,  additional: str):
+    """This function, named 'updater', updates an indexer dictionary by appending additional text to the main_text.
+     Its parameters include 'main_text' (the original text), 'last_indexer' (the last inder dict to update), and 'additional' (the text to add)."""
+
+    for index_, char in enumerate(additional):
+        if char.isalpha() == True:
+            if char.lower() not in last_indexer.keys():
+
+                last_indexer[char.lower()] = []
+                last_indexer[char.lower()].append(len(main_text) + index_ - 1)
+
+            else:
+                last_indexer[char.lower()].append(len(main_text) + index_ - 1)
+
+            if index_ + 1 < len(additional) and additional[index_ + 1].isalpha() == True:
+                if (char.lower() + additional[index_ + 1]) not in last_indexer.keys():
+                    last_indexer[(char.lower() + additional[index_ + 1])] = []
+                    last_indexer[(char.lower() + additional[index_ + 1])].append(len(main_text) + index_ - 1)
+
+
+                else:
+                    last_indexer[(char.lower() + additional[index_ + 1])].append(len(main_text) + index_ - 1)
+
+    return last_indexer
